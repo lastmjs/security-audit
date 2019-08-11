@@ -1,15 +1,15 @@
 # security-audit
 
-- [ ] Make sure all cryptographic algorithms are up to date, like which sha algorithm which ECDSA curve, etc
+- [ ] TODO put this in order before doing the security audit video
+- [ ] We should use OWASP to ensure that our audit is correctly targeting security risks: https://www.owasp.org/images/7/72/OWASP_Top_10-2017_%28en%29.pdf.pdf
+  - [ ] This should be part of the audit audit, every time the audit is completed, review the latest security risks
 - [ ] Use security scanning sites! It seems like there are a lot of good ones
 - [ ] Add this security header scanner: https://securityheaders.com/
 - [ ] Add the CSP evaluator: https://csp-evaluator.withgoogle.com/
 - [ ] Add CSP checking to the audit
 - [ ] Add the Mozilla Observatory scan to the audit: https://observatory.mozilla.org
 - [ ] Should we add the Lighthouse checks to the audit?
-- [ ] We should use OWASP to ensure that our audit is correctly targeting security risks: https://www.owasp.org/images/7/72/OWASP_Top_10-2017_%28en%29.pdf.pdf
-  - [ ] This should be part of the audit audit, every time the audit is completed, review the latest security risks
-- [ ] New audit to add: Ensure proper logging and monitoring. We don't really have a good way of knowing what attacks are taking place on our system, no alarms or anything to notify us of breaches
+- [ ] Make sure all cryptographic algorithms are up to date, like which sha algorithm which ECDSA curve, etc
 - [ ] New audit to add: Ensure encryption of data in transit and at rest: all ssl connections, force ssl on database, make sure certificates are handled appropriately, ensure database is encrypted and that its keys are rotated every quarter...the database should be reencrypted every quarter???
 - [ ] Update all software (All depedencies should be updated to safe versions. For example, Node.js, Ruby, Rails, dependencies installed through npm, Ruby/Rails dependencies, the OS and applications on our servers, etc)
   - [ ] Node.js should be on the latest LTS
@@ -35,3 +35,4 @@
 - [ ]  Revoke access to terminated employees (Review all user accounts. Anyone who is not currently an employee should be completely removed from our system so that they no longer have access to any sensitive data or functionality. Check our database, GitLab, Gmail, Twilio, Stripe, Slack, etc)
 - [ ] Review compliance with regulations (Make sure we are compliant with HIPAA, PCI, GDPR, etc)
 - [ ] Audit the audit (Take some time to study the latest security best practices. Ensure that our audit process is up-to-date and will lead to sufficient security. Clean up the issue, change wording, add audits, etc.)
+- [ ] New audit to add: Ensure proper logging and monitoring. We don't really have a good way of knowing what attacks are taking place on our system, no alarms or anything to notify us of breaches
