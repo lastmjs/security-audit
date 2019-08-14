@@ -25,7 +25,8 @@ Web application security audit to be performed once per quarter.
   - [ ] Automated tests to ensure data integrity
   - [ ] Physical/logistical access controls should be in place (locking screens, not sharing passwords, etc)
 - [ ] Analyze all endpoints and ensure proper authentication and authorization 
-  - [ ] All processes that are accessible through tcp/ip ports should be audited to ensure each endpoint has proper           - [ ] Analyze the types of operations, reads or writes, that are permitted
+  - [ ] All processes that are accessible through tcp/ip ports should be audited to ensure each endpoint has proper authentication and authorization
+  - [ ] Analyze the types of operations, reads or writes, that are permitted
 - [ ] Rotate all keys
   - [ ] public and private keys
   - [ ] secrets
