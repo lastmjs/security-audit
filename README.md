@@ -1,32 +1,33 @@
-# security-audit
+# Security Audit
+
+Web application security audit to be performed once per quarter.
 
 - [ ] Review latest OWASP Top 10
 - [ ] Run automatic security checks
-  - [ ] 
+  - [ ] Mozilla Observatory: https://observatory.mozilla.org
+  - [ ] Google CSP Evaluator: https://csp-evaluator.withgoogle.com/
+  - [ ] Security header scanner: https://securityheaders.com/
+  - [ ] Lighthouse (Chrome dev tools)
+- [ ] Ensure encryption of data in transit (force SSL connections everywhere possible)
+- [ ] Ensure encryption of data at rest (databases, harddrives, passwords, etc should be encrypted)
 - [ ] Update all dependencies
   - [ ] Use LTS versions (Node.js, Ubuntu, etc)
 - [ ] No vulnerabilities found in dependencies (GitHub and npm security reports, etc)
 - [ ] Lock down ports (tcp, udp, etc)
   - [ ] Only open ports that are absolutely necessary
   - [ ] Only open the smallest subset of absolutely necessary IP addresses on each port
+- [ ] Ensure strong authentication system
+  - [ ] Study up on the latest authentication best practices
+  - [ ] up-to-date and secure
+  - [ ] Cookies, JWTs, private and public keys, web storage, etc all used correctly
+- [ ] Ensure strong authorization system
+  - [ ] Study up on the latest authorization best practices
+  - [ ] Automated tests to ensure data integrity
+  - [ ] Physical/logistical access controls should be in place (locking screens, not sharing passwords, etc)
 
-
-- [ ] TODO put this in order before doing the security audit video
-- [ ] We should use OWASP to ensure that our audit is correctly targeting security risks: https://www.owasp.org/images/7/72/OWASP_Top_10-2017_%28en%29.pdf.pdf
-  - [ ] This should be part of the audit audit, every time the audit is completed, review the latest security risks
-- [ ] Use security scanning sites! It seems like there are a lot of good ones
-- [ ] Add this security header scanner: https://securityheaders.com/
-- [ ] Add the CSP evaluator: https://csp-evaluator.withgoogle.com/
-- [ ] Add CSP checking to the audit
-- [ ] Add the Mozilla Observatory scan to the audit: https://observatory.mozilla.org
-- [ ] Should we add the Lighthouse checks to the audit?
 - [ ] Make sure all cryptographic algorithms are up to date, like which sha algorithm which ECDSA curve, etc
-- [ ] New audit to add: Ensure encryption of data in transit and at rest: all ssl connections, force ssl on database, make sure certificates are handled appropriately, ensure database is encrypted and that its keys are rotated every quarter...the database should be reencrypted every quarter???
 - [ ] Rotate all keys (All current public and private keys, secrets, etc should be deleted and replaced by newly generated keys. Stripe keys, Twilio keys, GraphQL keys, Prisma keys, Rails keybase, etc should all be rotated.)
 - [ ] Rotate all user passwords (All user passwords should be changed. They should be a minimum of 10 characters in length. GitLab, Gmail, AWS, Twilio, Cloud66, Stripe, Slack, etc.)
-  - [ ]  Are there other "ports" on other protocols that could have access to the machine?
-- [ ] Authentication system (Make sure our authentication system/mechanisms are up-to-date and secure. Study cookies, JWTs, etc and how we are handling them to ensure we are implementing best practices and are not making glaring mistakes.)
-- [ ] Authorization system (Ensure that the way we handle access to data/permissions is appropriate. All automated tests for permissions should be passing. The way we handle roles should be appropriate. Physical/logistical access controls should be in place, such as locking screens, not sharing passwords, etc.)
 - [ ] Endpoints have proper authentication and authorization (All processes that are accessible through tcp/ip ports should be audited to ensure each endpoint has proper authentication and authorization. Analyze the types of operations, reads or writes, that are permitted. Any permitted operations should only allow access by those who need access.)
 - [ ] Ensure physical integrity of all keys (Check that all keys can be physically accessed (for example, check USB drives to ensure the keys can be retrieved). Know where all keys are stored, check all laptops, USB drives, environment variable configs, safes, etc.)
 - [ ] Review organizational access control policies (Review organizational access control policies such as who has access to what data, password length, password lifetimes, access to secret keys, password sharing, screen locking, proper data sharing channels (Gmail, Slack, Excel) etc)
